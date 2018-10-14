@@ -1,4 +1,4 @@
-package com.veleia.hs.services.mapper;
+package com.veleia.happyschool.restful.service.mapper;
 
 import com.veleia.hs.services.dto.TestDto;
 import com.veleia.hs.persistence.Test;

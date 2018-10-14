@@ -1,4 +1,4 @@
-package com.veleia.hs.persistence;
+package com.veleia.happyschool.persistence;
 
 import java.lang.reflect.ParameterizedType;
 import java.util.logging.Level;
@@ -37,9 +37,9 @@ public abstract class JpaDao<K, E> implements Dao<K, E> {
     @Override
     public void persist(E entity) {
         PersistenceManager.INSTANCE.getEntityManager().getTransaction().begin();
-        
+
         PersistenceManager.INSTANCE.getEntityManager().persist(entity);
-        
+
         PersistenceManager.INSTANCE.getEntityManager().getTransaction().commit();
     }
 

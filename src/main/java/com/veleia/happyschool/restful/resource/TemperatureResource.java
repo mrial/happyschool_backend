@@ -1,4 +1,4 @@
-package com.veleia.hs.services.facade;
+package com.veleia.happyschool.restful.resource;
 
 import com.veleia.hs.services.aplication.TemperatureApp;
 import com.veleia.hs.services.dto.TemperatureDto;
@@ -16,7 +16,7 @@ import javax.ws.rs.core.MediaType;
 @Path("temperature")
 @Consumes(MediaType.APPLICATION_JSON)
 @Produces(MediaType.APPLICATION_JSON)
-public class TemperatureFacade {
+public class TemperatureResource {
 
     @GET
     @Path("/read")

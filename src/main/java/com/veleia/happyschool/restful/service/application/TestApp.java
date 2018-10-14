@@ -1,4 +1,4 @@
-package com.veleia.hs.services.aplication;
+package com.veleia.happyschool.restful.service.application;
 
 import com.veleia.hs.persistence.JpaTestDao;
 import com.veleia.hs.persistence.Test;
