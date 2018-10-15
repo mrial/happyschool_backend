@@ -6,6 +6,8 @@ import io.dropwizard.setup.Environment;
 
 import com.veleia.happyschool.health.TemplateHealthCheck;
 import com.veleia.happyschool.restful.resource.HappySchoolResource;
+import io.dropwizard.jdbi3.JdbiFactory;
+import org.jdbi.v3.core.Jdbi;
 
 public class HappySchoolApplication extends Application<HappySchoolConfiguration> {
 
@@ -32,5 +34,10 @@ public class HappySchoolApplication extends Application<HappySchoolConfiguration
         final TemplateHealthCheck healthCheck = new TemplateHealthCheck(configuration.getTemplate());
 
         environment.healthChecks().register("template", healthCheck);
+        
+        
+        final JdbiFactory factory = new JdbiFactory();
+        
+        final Jdbi jdbi = factory.build(environment, configuration.getDataSourceFactory(), "mysql");
     }
 }
