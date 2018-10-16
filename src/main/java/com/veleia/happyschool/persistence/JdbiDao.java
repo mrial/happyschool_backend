@@ -3,15 +3,17 @@ package com.veleia.happyschool.persistence;
 import java.lang.reflect.ParameterizedType;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import org.jdbi.v3.sqlobject.customizer.Bind;
+import org.jdbi.v3.sqlobject.statement.SqlQuery;
 
-public abstract class JpaDao<K, E> implements Dao<K, E> {
+public abstract class JdbiDao<K, E> implements Dao<K, E> {
 
     protected Class<E> entityClass;
 
     /**
      *
      */
-    public JpaDao() {
+    public JdbiDao() {
         ParameterizedType genericSuperclass = (ParameterizedType) getClass().getGenericSuperclass();
 
         this.entityClass = (Class<E>) genericSuperclass.getActualTypeArguments()[1];

@@ -1,4 +1,4 @@
-package com.veleia.hs.persistence;
+package com.veleia.happyschool.persistence;
 
 /**
  * Generic DAO interface with the methods to share

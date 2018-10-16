@@ -1,6 +1,5 @@
-package com.veleia.hs.persistence;
+package com.veleia.happyschool.persistence;
 
-import com.veleia.hs.persistence.entities.Temperature;
 import java.util.Date;
 import java.util.List;
 

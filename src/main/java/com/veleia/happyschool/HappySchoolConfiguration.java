@@ -35,6 +35,11 @@ public class HappySchoolConfiguration extends Configuration {
         this.defaultName = name;
     }
 
+    /**
+     * A factory used to connect to a relational database management system.
+     * Factories are used by Dropwizard to group together related configuration
+     * parameters such as database connection driver, URI, password etc.
+     */
     @Valid
     @NotNull
     private DataSourceFactory database = new DataSourceFactory();
@@ -44,6 +49,12 @@ public class HappySchoolConfiguration extends Configuration {
         this.database = factory;
     }
 
+    /**
+     * A getter for the database factory.
+     *
+     * @return An instance of database factory deserialized from the
+     * configuration file passed as a command-line argument to the application.
+     */
     @JsonProperty("database")
     public DataSourceFactory getDataSourceFactory() {
         return database;

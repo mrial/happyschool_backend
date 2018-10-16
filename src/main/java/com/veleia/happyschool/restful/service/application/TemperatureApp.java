@@ -1,25 +1,28 @@
 package com.veleia.happyschool.restful.service.application;
 
-import com.veleia.hs.persistence.JpaTemperatureDao;
-import com.veleia.hs.persistence.entities.Temperature;
-import com.veleia.hs.services.dto.TemperatureDto;
+import com.veleia.happyschool.persistence.JdbiTemperatureDao;
+import com.veleia.happyschool.persistence.Temperature;
+import com.veleia.happyschool.restful.pojo.TemperatureDto;
+
+import org.jdbi.v3.core.Jdbi;
 
 /**
  *
  */
 public class TemperatureApp {
 
+    final Jdbi jdbi;
     /**
      *
      * @param temperatureDto
      * @return 
      */
     public static Temperature create(TemperatureDto temperatureDto) {
-        final JpaTemperatureDao jpaTemperatureDao = new JpaTemperatureDao();
+        final JdbiTemperatureDao jdbiTemperatureDao = jdbi.onDemand(JdbiTemperatureDao.class);
 
-        final Temperature temperature = jpaTemperatureDao.createNewObject();
+        final Temperature temperature = jdbiTemperatureDao.createNewObject();
 
-        jpaTemperatureDao.persist(temperature);
+        jdbiTemperatureDao.persist(temperature);
         
         return temperature;
     }

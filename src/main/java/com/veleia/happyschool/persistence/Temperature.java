@@ -1,4 +1,4 @@
-package com.veleia.hs.persistence.entities;
+package com.veleia.happyschool.persistence;
 
 import java.io.Serializable;
 import java.util.Date;

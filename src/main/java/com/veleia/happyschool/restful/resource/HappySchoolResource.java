@@ -1,7 +1,7 @@
 package com.veleia.happyschool.restful.resource;
 
 import com.codahale.metrics.annotation.Timed;
-import com.veleia.happyschool.api.SayingDto;
+import com.veleia.happyschool.restful.pojo.SayingDto;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
@@ -28,6 +28,7 @@ public class HappySchoolResource {
     @Timed
     public SayingDto sayHello(@QueryParam("name") Optional<String> name) {
         final String value = String.format(template, name.orElse(defaultName));
+        
         return new SayingDto(counter.incrementAndGet(), value);
     }
 }

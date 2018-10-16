@@ -1,4 +1,4 @@
-package com.veleia.hs.services.dto;
+package com.veleia.happyschool.restful.pojo;
 
 /**
  *

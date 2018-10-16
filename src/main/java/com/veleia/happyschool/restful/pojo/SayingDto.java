@@ -1,4 +1,4 @@
-package com.veleia.happyschool.api;
+package com.veleia.happyschool.restful.pojo;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import org.hibernate.validator.constraints.Length;
