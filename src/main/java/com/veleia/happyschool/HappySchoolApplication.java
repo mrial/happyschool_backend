@@ -46,6 +46,6 @@ public class HappySchoolApplication extends Application<HappySchoolConfiguration
         
         environment.jersey().register(new TemperatureResource(jdbi));
         
-        environment.jersey().register(new TestResource(jdbi));
+        //environment.jersey().register(new TestResource(jdbi));
     }
 }

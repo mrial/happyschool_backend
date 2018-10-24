@@ -6,13 +6,13 @@ database:
   driverClass: org.mysql.Driver
 
   # the username
-  user: pg-user
+  user: root_development
 
   # the password
-  password: iAMs00perSecrEET
+  password: 83b560ea
 
   # the JDBC URL
-  url: jdbc:postgresql://db.example.com/db-prod
+  url: jdbc:mysql://db4free.net/db-prod
 
   # any properties specific to your JDBC driver:
   properties:

@@ -1,4 +1,4 @@
-package com.veleia.hs.persistence;
+package com.veleia.happyschool.persistence;
 
 public class Question {
 }

@@ -29,7 +29,7 @@ public class TemperatureResource {
     @Path("/read")
     @Produces(MediaType.TEXT_PLAIN)
     public String read() {
-        TemperatureApp.create(null);
+        //TemperatureApp.create(null);
         return "hola";
     }
 
@@ -40,6 +40,6 @@ public class TemperatureResource {
     @Path("/create")
     @Produces(MediaType.TEXT_PLAIN)
     public void create(TemperatureDto entity) {
-        TemperatureApp.create(entity);
+        //TemperatureApp.create(entity);
     }
 }
