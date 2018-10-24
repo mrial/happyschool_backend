@@ -27,7 +27,7 @@ public abstract class JdbiDao<K, E> implements Dao<K, E> {
         try {
             return entityClass.newInstance();
         } catch (InstantiationException | IllegalAccessException ex) {
-            Logger.getLogger(JpaDao.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(JdbiDao.class.getName()).log(Level.SEVERE, null, ex);
         }
         return null;
     }
