@@ -3,7 +3,7 @@ defaultName: Stranger
 
 database:
   # the name of your JDBC driver
-  driverClass: org.mysql.Driver
+  driverClass: com.mysql.cj.jdbc.Driver
 
   # the username
   user: root_development
@@ -12,7 +12,7 @@ database:
   password: 83b560ea
 
   # the JDBC URL
-  url: jdbc:mysql://db4free.net/db-prod
+  url: jdbc:mysql://db4free.net/happy_school
 
   # any properties specific to your JDBC driver:
   properties:
